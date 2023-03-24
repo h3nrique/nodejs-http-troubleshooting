@@ -12,6 +12,7 @@ var server = app.listen(8080, function () {
   console.log('Example app listening at http://%s:%s', host, port);
 });
 app.all('/*', upload.any(), async (req, res) => {
+  console.log("Time :: ", new Date());
   console.log("Headers :: ", req.headers);
   console.log("Body :: ", req.body);
   console.log("Method :: ", req.method);
