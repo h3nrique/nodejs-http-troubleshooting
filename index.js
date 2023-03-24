@@ -6,7 +6,7 @@ const upload = multer() // for parsing multipart/form-data
 app.use(bodyParser.json({limit: '1mb'})) // for parsing application/json
 app.use(bodyParser.urlencoded({limit: '1mb', extended: true})) // for parsing application/x-www-form-urlencoded
 app.use(bodyParser.raw());
-var server = app.listen(3000, function () {
+var server = app.listen(8080, function () {
   var host = server.address().address;
   var port = server.address().port;
   console.log('Example app listening at http://%s:%s', host, port);
