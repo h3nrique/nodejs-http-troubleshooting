@@ -16,6 +16,9 @@ app.all('/*', upload.any(), async (req, res) => {
   console.log("Headers :: ", req.headers);
   console.log("Body :: ", req.body);
   console.log("Method :: ", req.method);
+  console.log("Protocol :: ", req.protocol);
+  console.log("Hostname :: ", req.hostname);
+  console.log("Host/Port :: ", req.get('Host'));
   console.log("URL :: ", req.url);
   console.log("Query :: ", req.query);
   console.log("Params :: ", req.params);
